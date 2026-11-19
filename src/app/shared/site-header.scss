@@ -1,4 +1,4 @@
-:host { display: block; position: relative; z-index: 5; }
+:host { display: block; position: sticky; top: 0; z-index: 5; }
 .skip-link {
   position: absolute; top: -60px; left: 16px; z-index: 10;
   padding: 10px 14px; background: var(--green); color: #fff;
