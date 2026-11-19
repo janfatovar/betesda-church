@@ -38,10 +38,12 @@ describe('App', () => {
       ),
     ).toBeTruthy();
     expect(compiled.querySelectorAll('footer .social-icon')).toHaveLength(3);
+    expect(compiled.querySelector('header img.brand-mark[src="betesda-church-logo.png"]')).toBeTruthy();
+    expect(compiled.querySelector('footer img.brand-mark[src="betesda-church-logo.png"]')).toBeTruthy();
     expect(compiled.textContent).toContain('We are a church that');
     expect(compiled.textContent).toContain('loves and practices love.');
     expect(compiled.textContent).toContain('We love because He first loved us.');
-    expect(compiled.querySelector('img[src="/pastor-and-wife.jpg"]')?.getAttribute('alt')).toBe(
+    expect(compiled.querySelector('img[src="pastor-and-wife.jpg"]')?.getAttribute('alt')).toBe(
       "Betesda Church's pastor and his wife",
     );
     expect(compiled.querySelectorAll('app-home-social-links a')).toHaveLength(3);
