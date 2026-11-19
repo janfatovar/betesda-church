@@ -25,3 +25,9 @@ The church address is 12200 SW 56th St, Miami, FL 33175. Weekly gatherings are F
 npm run build
 npm test
 ```
+
+## Deploy to GitHub Pages
+
+The `main` branch deploys automatically to [https://janfatovar.github.io/betesda-church/](https://janfatovar.github.io/betesda-church/) after the GitHub Actions workflow passes its tests and production build. You can also start a deployment manually from the Actions tab.
+
+In the repository settings, set **Pages → Build and deployment → Source** to **GitHub Actions**. The workflow builds with the repository's Pages base path and includes a fallback for direct navigation to Angular routes.
