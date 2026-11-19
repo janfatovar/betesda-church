@@ -1,0 +1,37 @@
+:host { display: block; }
+.page-hero { padding: 100px max(32px, calc((100% - 1060px) / 2)) 88px; background: var(--paper-deep); }
+.page-hero .display-heading { max-width: 900px; margin: 22px 0; font-size: clamp(3.4rem, 7vw, 6.3rem); }
+.display-heading em { color: var(--coral); font-weight: 400; }
+.page-hero .body-copy { max-width: 550px; margin: 0; font-size: 1.05rem; }
+.story-section { display: grid; width: min(1060px, calc(100% - 64px)); grid-template-columns: .9fr 1.1fr; gap: 85px; align-items: center; margin: auto; padding: 110px 0; }
+.story-art { position: relative; display: flex; min-height: 470px; align-items: flex-end; overflow: hidden; padding: 25px; background: #cbdced; }
+.story-art::before { position: absolute; inset: 0; background: linear-gradient(180deg, rgba(38,59,145,.03), rgba(38,59,145,.34)); content: ''; }
+.story-art > span { position: relative; color: #fff; font-size: .65rem; font-weight: 700; letter-spacing: .17em; }
+.art-sun { position: absolute; top: 50px; right: 50px; width: 150px; height: 150px; border-radius: 50%; background: #79c9e7; filter: blur(1px); }
+.art-stem { position: absolute; bottom: 0; left: 42%; width: 2px; height: 73%; background: #386eaa; transform: rotate(9deg); transform-origin: bottom; }
+.art-leaf { position: absolute; width: 125px; height: 48px; border-radius: 100% 0 100% 0; background: #3574b3; }
+.leaf-one { bottom: 45%; left: 19%; transform: rotate(20deg); }
+.leaf-two { bottom: 62%; left: 43%; width: 145px; background: #5aa8d2; transform: rotate(-32deg) scaleX(-1); }
+.story-copy .display-heading { margin: 18px 0; font-size: clamp(2.9rem, 5vw, 4.4rem); }
+.story-copy .body-copy { margin: 0 0 16px; }
+.story-copy .button { margin-top: 14px; }
+.beliefs { display: grid; grid-template-columns: .8fr 1.2fr; gap: 80px; padding: 100px max(32px, calc((100% - 1060px) / 2)); background: var(--paper-deep); }
+.beliefs-heading .display-heading { margin: 18px 0; font-size: clamp(2.8rem, 4.5vw, 4.2rem); }
+.beliefs-heading em { color: var(--coral); font-weight: 400; }
+.belief-list article { display: grid; grid-template-columns: 48px 1fr; gap: 20px; padding: 22px 0; border-bottom: 1px solid var(--line); }
+.belief-list article:first-child { padding-top: 0; }
+.belief-list article > span { color: var(--coral); font-size: .68rem; font-weight: 700; letter-spacing: .1em; }
+.belief-list h3 { margin: 0 0 7px; font-family: 'DM Serif Display', Georgia, serif; font-size: 1.35rem; font-weight: 400; }
+.belief-list p { max-width: 450px; margin: 0; color: var(--muted); font-size: .85rem; line-height: 1.7; }
+.closing { display: flex; min-height: 340px; flex-direction: column; align-items: center; justify-content: center; padding: 70px 24px; background: var(--green); text-align: center; }
+.closing .eyebrow { color: var(--gold); }
+.closing .display-heading { margin: 17px 0 24px; color: var(--paper); font-size: clamp(2.8rem, 5vw, 4.6rem); }
+.button--light { background: var(--paper); color: var(--green-dark); }
+.button--light:hover { background: var(--gold); color: var(--green-dark); }
+@media (max-width: 760px) {
+  .page-hero { padding: 75px 24px 65px; }
+  .page-hero .display-heading { font-size: clamp(3rem, 11vw, 4.5rem); }
+  .story-section { width: calc(100% - 48px); grid-template-columns: 1fr; gap: 45px; padding: 72px 0; }
+  .story-art { min-height: 350px; }
+  .beliefs { grid-template-columns: 1fr; gap: 35px; padding: 75px 24px; }
+}

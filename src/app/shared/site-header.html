@@ -1,0 +1,25 @@
+<a class="skip-link" href="#main-content">Skip to content</a>
+<header class="site-header">
+  <div class="header-inner">
+    <a class="brand" routerLink="/" aria-label="Betesda Church home" (click)="closeMenu()">
+      <img class="brand-mark" src="/betesda-church-logo.png" alt="" />
+      <span class="brand-name">BETESDA <small>CHURCH · MIAMI</small></span>
+    </a>
+    <button
+      class="menu-toggle"
+      type="button"
+      [attr.aria-expanded]="menuOpen()"
+      aria-controls="primary-navigation"
+      [attr.aria-label]="menuOpen() ? 'Close navigation menu' : 'Open navigation menu'"
+      (click)="toggleMenu()"
+    >
+      <span></span><span></span>
+    </button>
+    <nav id="primary-navigation" [class.is-open]="menuOpen()" aria-label="Main navigation">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" (click)="closeMenu()">Home</a>
+      <a routerLink="/about" routerLinkActive="active" (click)="closeMenu()">Our story</a>
+      <a routerLink="/visit" routerLinkActive="active" (click)="closeMenu()">Plan a visit</a>
+      <a class="nav-cta" routerLink="/visit" (click)="closeMenu()">Come see us <span aria-hidden="true">↗</span></a>
+    </nav>
+  </div>
+</header>

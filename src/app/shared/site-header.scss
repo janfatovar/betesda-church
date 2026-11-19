@@ -1,0 +1,44 @@
+:host { display: block; position: relative; z-index: 5; }
+.skip-link {
+  position: absolute; top: -60px; left: 16px; z-index: 10;
+  padding: 10px 14px; background: var(--green); color: #fff;
+}
+.skip-link:focus { top: 12px; }
+.site-header { background: var(--paper); }
+.header-inner {
+  display: flex; width: min(1200px, calc(100% - 64px)); height: 106px;
+  align-items: center; justify-content: space-between; margin: auto;
+}
+.brand { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; }
+.brand-mark { display: block; width: 63px; height: 90px; object-fit: contain; }
+.brand-name { color: var(--ink); font-size: .79rem; font-weight: 700; letter-spacing: .12em; }
+.brand-name small { display: block; margin-top: 4px; color: var(--muted); font-size: .56rem; letter-spacing: .16em; }
+nav { display: flex; align-items: center; gap: 38px; }
+nav a {
+  color: #53617b; font-size: .81rem; font-weight: 600; text-decoration: none;
+  transition: color 160ms ease;
+}
+nav a:hover, nav a.active { color: var(--coral); }
+nav .nav-cta {
+  display: inline-flex; min-height: 43px; align-items: center; gap: 13px;
+  padding: 0 17px; border: 1px solid rgba(29, 44, 36, .24); border-radius: 2px;
+  color: var(--ink);
+}
+nav .nav-cta:hover { border-color: var(--green); background: var(--green); color: #fff; }
+.menu-toggle { display: none; }
+@media (max-width: 720px) {
+  .header-inner { width: calc(100% - 40px); height: 98px; }
+  .menu-toggle {
+    display: flex; width: 42px; height: 42px; flex-direction: column; align-items: center;
+    justify-content: center; gap: 6px; border: 1px solid var(--line); background: transparent;
+  }
+  .menu-toggle span { width: 17px; height: 1.5px; background: var(--ink); }
+  nav {
+    position: absolute; top: 98px; right: 0; left: 0; display: none;
+    align-items: stretch; gap: 0; padding: 12px 20px 20px;
+    border-top: 1px solid var(--line); background: var(--paper);
+  }
+  nav.is-open { display: flex; flex-direction: column; }
+  nav a { padding: 14px 0; }
+  nav .nav-cta { justify-content: center; margin-top: 8px; padding: 0 17px; }
+}

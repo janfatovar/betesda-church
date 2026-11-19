@@ -1,0 +1,13 @@
+:host { display: block; width: min(350px, calc(100% - 32px)); margin: 58px auto 0; }
+.pastors-social-bar { display: flex; min-height: 52px; align-items: center; justify-content: center; gap: 12px; padding: 8px 14px; border-radius: 5px; background: #b7deee; color: var(--green); }
+.social-prompt { margin-right: 4px; font-size: .74rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; }
+.pastors-social-bar a { display: grid; width: 34px; height: 34px; place-items: center; border: 1px solid var(--green); border-radius: 50%; background: var(--green); color: var(--paper); transition: background 160ms ease, color 160ms ease, transform 160ms ease; }
+.pastors-social-bar a:hover { transform: translateY(-2px); border-color: var(--coral); background: var(--coral); color: var(--paper); }
+.pastors-social-bar svg { width: 17px; height: 17px; fill: currentColor; }
+.pastors-social-bar a:nth-of-type(2) svg { fill: none; stroke: currentColor; stroke-width: 1.8; }
+.pastors-social-bar .icon-dot { fill: currentColor; stroke: none; }
+.pastors-social-bar .youtube-icon { width: 19px; height: 19px; }
+.pastors-social-bar .youtube-icon .icon-play { fill: var(--green-dark); }
+@media (max-width: 720px) {
+  :host { margin-top: 50px; }
+}
